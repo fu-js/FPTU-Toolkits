@@ -1,0 +1,21 @@
+{
+	"manifest_version": 3,
+	"name": "FPTU FAP Toolkits",
+	"version": "1.0",
+	"content_scripts": [
+		{
+			"matches": [
+				"https://fap.fpt.edu.vn/Default.aspx/*",
+				"https://fap.fpt.edu.vn/"
+			],
+			"js": ["./content/fap_login.js"],
+			"world": "MAIN"
+		}, {
+			"matches": [
+				"https://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*"
+			],
+			"js": ["./content/google.js"],
+			"world": "MAIN"
+		}
+	]
+}
