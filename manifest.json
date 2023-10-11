@@ -17,5 +17,11 @@
 			"js": ["./content/google.js"],
 			"world": "MAIN"
 		}
-	]
+	],
+	"icons": {
+		"16": "./assets/js_icon.png",
+		"32": "./assets/js_icon.png",
+		"48": "./assets/js_icon.png",
+		"128": "./assets/js_icon.png"
+	}
 }
