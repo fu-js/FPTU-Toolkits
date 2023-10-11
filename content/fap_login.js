@@ -1,15 +1,12 @@
-const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+const selectEl = document.querySelector("#ctl00_mainContent_ddlCampus");
 
-const main = async () => {
-	const selectBox = document.getElementById('ctl00_mainContent_ddlCampus');
-	console.log(selectBox.selectedIndex);
-	if (selectBox.selectedIndex === 0) {
-		selectBox.selectedIndex = 1;
-	
-		__doPostBack('ctl00$mainContent$ddlCampus');
-	} else {
-		document.querySelector('#ctl00_mainContent_btnLogin').click()
-	}	
-};
+if (selectEl.selectedIndex !== 1) {
+	// change value of select to Hola
+	selectEl.selectedIndex = 1;
+	__doPostBack('ctl00$mainContent$ddlCampus','');
+} else {
+	const loginBtn = document.querySelector("#ctl00_mainContent_btnLogin");
 
-main();
+	// click button
+	loginBtn.click();
+}
