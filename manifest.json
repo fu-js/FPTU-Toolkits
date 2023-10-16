@@ -2,22 +2,20 @@
 	"manifest_version": 3,
 	"name": "FPTU FAP Toolkits",
 	"version": "1.0",
-	"content_scripts": [
-		{
-			"matches": [
-				"https://fap.fpt.edu.vn/Default.aspx/*",
-				"https://fap.fpt.edu.vn/"
-			],
-			"js": ["./content/fap_login.js"],
-			"world": "MAIN"
-		}, {
-			"matches": [
-				"https://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*"
-			],
-			"js": ["./content/google.js"],
-			"world": "MAIN"
-		}
-	],
+	"content_scripts": [{
+		"matches": [
+			"https://fap.fpt.edu.vn/Default.aspx/*",
+			"https://fap.fpt.edu.vn/"
+		],
+		"js": ["./content/fap_login.js"],
+		"world": "MAIN"
+	}, {
+		"matches": [
+			"https://accounts.google.com/o/oauth2/auth*fap.fpt.edu.vn*"
+		],
+		"js": ["./content/google.js"],
+		"world": "MAIN"
+	}],
 	"action": {
 		"default_popup": "./popup/popup.html"
 	},
@@ -26,5 +24,8 @@
 		"32": "./assets/js_icon.png",
 		"48": "./assets/js_icon.png",
 		"128": "./assets/js_icon.png"
-	}
+	},
+	"permissions": [
+		"storage"
+	]
 }
