@@ -18,6 +18,9 @@
 			"world": "MAIN"
 		}
 	],
+	"action": {
+		"default_popup": "./popup/popup.html"
+	},
 	"icons": {
 		"16": "./assets/js_icon.png",
 		"32": "./assets/js_icon.png",
