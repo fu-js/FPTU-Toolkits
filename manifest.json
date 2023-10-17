@@ -17,6 +17,12 @@
 			"./utils/storage.js",
 			"./content/google.js"
 		]
+	}, {
+		"matches": [
+			"https://fap.fpt.edu.vn/Feedback/*"
+		],
+		"js": ["./content/feedback.js"],
+		"world": "MAIN"
 	}],
 	"action": {
 		"default_popup": "./popup/popup.html"
